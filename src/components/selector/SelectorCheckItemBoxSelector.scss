@@ -1,0 +1,23 @@
+@import '../../general.scss';
+
+.selector-checklist-size-selector__sizes {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.selector-checklist-item-box {
+	flex-basis: 20%;
+	margin-right: 1em;
+	align-items: center;
+	margin-bottom: 1em;
+	text-align: center;
+	font-size: 12px;
+	cursor: pointer;
+	@include transition(all 0.25s ease-in-out);
+
+	&__selected, &:hover {
+		color: $white;
+		background-color: $black;
+		border-color: $black;
+	}
+}

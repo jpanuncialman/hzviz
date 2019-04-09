@@ -1,0 +1,44 @@
+.visualizer {
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
+	// padding: 0 2%;
+}
+
+.visualizer__images {
+	position: relative;
+	display: grid;
+  grid-template-columns: 1fr;
+
+	img {
+		width: 100%;
+		// position: absolute;
+		top: 0;
+		grid-row-start: 1;
+ 		grid-column-start: 1;
+
+ 		&.empty {
+ 			z-index: 1;
+ 		}
+
+ 		&.pillows {
+ 			z-index: 2;
+ 		}
+
+ 		&.sheetSet {
+ 			z-index: 3;
+ 		}
+
+ 		&.comforterDuvet {
+ 			z-index: 4;
+ 		}
+
+ 		&.decorativePillows {
+ 			z-index: 5;
+ 		}
+
+ 		&.blanketsThrows {
+ 			z-index: 6;
+ 		}
+	}
+}

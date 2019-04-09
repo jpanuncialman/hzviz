@@ -1,0 +1,79 @@
+@import '../../general.scss';
+.checklist-item__grid-selector-container {
+	max-height: 1000px;
+	overflow: hidden;
+	height: auto;
+	@include transition(max-height 0.55s ease-in-out);
+
+	&__hidden {
+		max-height: 0;
+	}
+}
+.selector-checklist-grid-selector__items {
+	display: grid;
+	grid-template-columns: 23% 23% 23% 23%;
+	grid-column-gap: 2%;
+	grid-row-gap: 2%;
+
+
+}
+
+.selector-checklist-item-grid-item, .selector-checklist-item-grid-item__selected {
+	position: relative;
+
+	.selector-checklist-item-grid-item__image {
+		width: 100%;
+		height: auto;
+		cursor: pointer;
+		border: 2px solid transparent;
+		border-radius: 5px;
+		@include transition(border-color 0.25s ease-in-out); 
+	}
+
+	.selector-checklist-item-grid-item__check-circle, .selector-checklist-item-grid-item__check-circle__selected {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		border-radius: 300px;
+		height: 45%;
+		width: 45%;
+		opacity: 0;
+		cursor: pointer;
+		background-color: $pink;
+		@include transition(opacity 0.25s ease-in-out);		
+
+		&::after {
+			position: absolute;
+			width: 10px;
+	    height: 20px;
+	    content: "";
+	    top: 0.85em;
+	    left: 1.5em;
+	    border-bottom: 4px solid $white;
+	    border-right: 4px solid $white;
+	    @include rotate(45deg);
+	    opacity: 0;
+	    @include transition(opacity 0.25s ease-in-out);		
+		}
+
+		&__selected {
+			opacity: 1;
+
+			&::after {
+				opacity: 1;
+			}
+		}
+		
+	}
+
+	&__selected, &:hover {
+		.selector-checklist-item-grid-item__image {
+			border-color: $pink;
+		}
+	}
+
+
+}
+
+

@@ -1,0 +1,131 @@
+@import '../../general.scss';
+.selector-checklist-item__header {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	justify-content: space-between;
+	border-bottom: 1.5px solid $light-gray;
+}
+
+.selector-checklist-item__check-title {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+//Checkbox
+.selector-checklist-item__checkbox {
+	position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+  ~ .selector-checklist-item__check {
+	  top: 0;
+	  left: 0;
+	  width: 1em;
+	  height: 1em;
+	  background-color: $white;
+	  border: 1.5px solid $light-gray;
+	  display: flex;
+	  border-radius: 2px;
+	  position: relative;
+	  @include transition(all 0.25s ease-in-out);
+
+	  &:before, &:after {
+	  	content: "";
+	  	opacity: 0;
+	  	position: absolute;
+	  	@include transition(opacity 0.25s ease-in-out);
+	  }
+
+	  &:hover {
+	  	border-color: $pink;
+	  	}
+	}
+
+	//Group selected
+	&:checked {
+  	~ .selector-checklist-item__check {
+  		border-color: $pink;
+  		background-color: $pink;
+
+  		&:before {
+  			opacity: 1;
+  			width: 100%;
+  			height: 100%;
+		    left: 50%;
+		    top: 50%;
+		    transform: translate(-50%,-50%);
+  		}
+
+  		&:after {
+		  	opacity: 1;
+		    width: 3px;
+		    height: 7px;
+		    top: 2px;
+		    left: 6px;
+		    border-bottom: 1.5px solid $white;
+		    border-right: 1.5px solid $white;
+		    @include rotate(45deg);
+		  }
+  	}
+  }
+
+
+}
+
+//Title
+.selector-checklist-item__title {
+	margin: 0;
+	margin-left: 1em;
+}
+
+
+//Plus-Minus sign
+.selector-checklist-item__plus-minus {
+    height: 0.8em;
+    width: 0.8em;
+    position: relative;
+
+    &::before {
+    	background-color: $dark-gray;
+    	content: "";
+    	position: absolute;
+    	width: 1.5px;
+    	height: 100%;
+    	left: 50%;
+    	transform: translateX(-50%);
+    	@include transition(transform 0.25s ease-in-out);
+    }
+
+    &::after {
+    	background-color: $dark-gray;
+    	content: "";
+    	position: absolute;
+    	height: 1.5px;
+    	width: 100%;
+    	top: 50%;
+    	transform: translateY(-50%);
+    	
+    }
+
+    &.expanded::before {
+    	@include rotate(90deg);
+    }
+}
+
+//Check Item Body
+.selector-checklist-item__body {
+	height: auto;
+	max-height: 0;
+	padding: 0;
+	overflow: hidden;
+	@include transition(all 0.25s ease-in-out);
+
+	&.expanded {
+		padding: 1em 0;
+		max-height: 500px;
+	}
+}

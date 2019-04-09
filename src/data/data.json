@@ -1,0 +1,470 @@
+{
+	"data": [
+		{
+			"ind": 1,
+			"category": "Comforter / Duvet",
+			"products": [
+				{
+					"name": "Sasha Stripe Comforter and Sham Set",
+					"gridImage": "/images/visualizer/duvetcover/img1.jpg",
+					"prices": {
+						"twin / twin-xl": 129,
+						"full / queen": 149
+					}
+				},
+				{
+					"name": "Grey Ombre Duvet Cover and Sham Set",
+					"gridImage": "/images/visualizer/duvetcover/img2.jpg",
+					"prices": {
+						"twin-xl": 99,
+						"twin": 99,
+						"full / queen": 129
+					}
+				},
+				{
+					"name": "Dusty Rose Chloe Medallion Duvet Cover and Sham Set",
+					"gridImage": "/images/visualizer/duvetcover/img3.jpg",
+					"prices": {
+						"twin-xl": 99,
+						"twin": 99,
+						"full / queen": 129
+					}
+				},
+				{
+					"name": "Grey Chloe Medallion Duvet Cover and Sham Set",
+					"gridImage": "/images/visualizer/duvetcover/img4.jpg",
+					"prices": {
+						"twin-xl": 99,
+						"twin": 99,
+						"full / queen": 129
+					}
+				},
+				{
+					"name": "White Soft Loft Duvet Cover and Sham Set",
+					"gridImage": "/images/visualizer/duvetcover/img5.jpg",
+					"prices": {
+						"twin-xl": 119,
+						"twin": 119,
+						"full / queen": 149
+					}
+				},
+				{
+					"name": "Light Grey Soft Loft Duvet Cover and Sham Set",
+					"gridImage": "/images/visualizer/duvetcover/img6.jpg",
+					"prices": {
+						"twin-xl": 119,
+						"twin": 119,
+						"full / queen": 149
+					}
+				},
+				{
+					"name": "Sienna Duvet Cover and Sham Set",
+					"gridImage": "/images/visualizer/duvetcover/img7.jpg",
+					"prices": {
+						"twin-xl": 99,
+						"twin": 99,
+						"full / queen": 129
+					}
+				},
+				{
+					"name": "Grey Eyelash Stripe Comforter and Sham Set",
+					"gridImage": "/images/visualizer/duvetcover/img8.jpg",
+					"prices": {
+						"twin / twin-xl": 139,
+						"full / queen": 159
+					}
+				},
+				{
+					"name": "Savannah Duvet Cover and Sham Set",
+					"gridImage": "/images/visualizer/duvetcover/img9.jpg",
+					"prices": {
+						"twin-xl": 99,
+						"twin": 99,
+						"full / queen": 129
+					}
+				},
+				{
+					"name": "White Eyelash Stripe Duvet Cover and Sham Set",
+					"gridImage": "/images/visualizer/duvetcover/img10.jpg",
+					"prices": {
+						"twin-xl": 99,
+						"twin": 99,
+						"full / queen": 129
+					}
+				},
+				{
+					"name": "London Hotel Duvet Cover and Sham Set",
+					"gridImage": "/images/visualizer/duvetcover/img11.jpg",
+					"prices": {
+						"twin-xl": 129,
+						"twin": 129,
+						"full / queen": 149
+					}
+				}
+			]
+		},
+		{
+			"ind": 2,
+			"category": "Sheet Set",
+			"products": [
+				{
+					"name": "Deluxe Sheet Set, 300 Thread Count, 100% Cotton Sateen",
+					"gridImage": "/images/visualizer/sheetset/img0.jpg",
+					"prices": {
+						"twin-xl": 39,
+						"twin": 49,
+						"full / queen": 59
+					},
+					"colors": [
+						{
+							"hex": "red",
+							"color": "Red",
+							"image": "/images/visualizer/sheetset/img0.jpg"
+						},
+						{
+							"hex": "green",
+							"color": "Celedon",
+							"image": "/images/visualizer/sheetset/img0a.jpg"
+						},
+						{
+							"hex": "blue",
+							"color": "Ashley Blue",
+							"image": "/images/visualizer/sheetset/img0b.jpg"
+						}
+					]
+				},
+				{
+					"name": "Super Soft T-Shirt Jersey Sheet Set - Light Pink",
+					"gridImage": "/images/visualizer/sheetset/img1.jpg",
+					"prices": {
+						"twin-xl": 39,
+						"twin": 49,
+						"full / queen": 59
+					}
+				},
+				{
+					"name": "Super Soft T-Shirt Jersey Sheet Set - Light Purple",
+					"gridImage": "/images/visualizer/sheetset/img2.jpg",
+					"prices": {
+						"twin-xl": 39,
+						"twin": 49,
+						"full / queen": 59
+					}
+				},
+				{
+					"name": "Super Soft T-Shirt Jersey Sheet Set - Navy",
+					"gridImage": "/images/visualizer/sheetset/img3.jpg",
+					"prices": {
+						"twin-xl": 39,
+						"twin": 49,
+						"full / queen": 59
+					}
+				},
+				{
+					"name": "Super Soft T-Shirt Jersey Sheet Set - Light Gray",
+					"gridImage": "/images/visualizer/sheetset/img8.jpg",
+					"prices": {
+						"twin-xl": 39,
+						"twin": 49,
+						"full / queen": 59
+					}
+				},
+				{
+					"name": "Deluxe Soft Tee Jersey Sheet Set",
+					"gridImage": "/images/visualizer/sheetset/img4.jpg",
+					"prices": {
+						"twin-xl": 40,
+						"twin": 50,
+						"full / queen": 60,
+						"king": 70
+					}
+				},
+				{
+					"name": "Super Soft T-Shirt Jersey Sheet Set - Dark Grey",
+					"gridImage": "/images/visualizer/sheetset/img5.jpg",
+					"prices": {
+						"twin-xl": 39,
+						"twin": 49,
+						"full / queen": 59
+					}
+				},
+				{
+					"name": "Deluxe Sheet Set, 300 Thread Count, 100% Cotton Sateen",
+					"gridImage": "/images/visualizer/sheetset/img6.jpg",
+					"prices": {
+						"twin-xl": 65,
+						"twin": 34,
+						"full": 45,
+						"queen": 44,
+						"king": 65
+					}
+				},
+				{
+					"name": "Navy Pinstripe Sheet Set",
+					"gridImage": "/images/visualizer/sheetset/img7.jpg",
+					"prices": {
+						"twin-xl": 39,
+						"queen": 50
+					}
+				},
+				{
+					"name": "Super Soft T-Shirt Jersey Sheet Set - Light Blue",
+					"gridImage": "/images/visualizer/sheetset/img9.jpg",
+					"prices": {
+						"twin-xl": 39,
+						"twin": 49,
+						"full / queen": 59
+					}
+				}
+			]
+		},
+		{
+			"ind": 3,
+			"category": "Pillows",
+			"allowMult": true,
+			"maxSelectable": 3,
+			"products": [
+				{
+					"name": "Shut Eye Pillow",
+					"gridImage": "/images/visualizer/pillows/img1.jpg",
+					"prices": {
+						"one size": 36
+					}
+				},
+				{
+					"name": "Faux Mongolian Pillow - Square",
+					"gridImage": "/images/visualizer/pillows/img2.jpg",
+					"prices": {
+						"one size": 36
+					}
+				},
+				{
+					"name": "Square Gaga Double Nailhead Pillow",
+					"gridImage": "/images/visualizer/pillows/img3.jpg",
+					"prices": {
+						"one size": 39
+					}
+				},
+				{
+					"name": "Shaped Perfume Bottle Pillow",
+					"gridImage": "/images/visualizer/pillows/img4.jpg",
+					"prices": {
+						"one size": 36
+					}
+				},
+				{
+					"name": "Xoxo Pillow",
+					"gridImage": "/images/visualizer/pillows/img5.jpg",
+					"prices": {
+						"one size": 36
+					}
+				},
+				{
+					"name": "Faux Mongolian Pillow - Rectangle",
+					"gridImage": "/images/visualizer/pillows/img6.jpg",
+					"prices": {
+						"one size": 36
+					}
+				},
+				{
+					"name": "Crackle Metallic Pillow",
+					"gridImage": "/images/visualizer/pillows/img7a.jpg",
+					"prices": {
+						"one size": 36
+					}				},
+				{
+					"name": "Dream On Pillow",
+					"gridImage": "/images/visualizer/pillows/img8.jpg",
+					"prices": {
+						"one size": 29
+					}
+				}
+			]
+		},
+		{
+			"ind": 4,
+			"category": "Blankets / Throws",
+			"products": [
+				{
+					"name": "Crushed Velvet Sherpa Throw Blanket",
+					"gridImage": "/images/visualizer/throws/img1.jpg",
+					"prices": {
+						"one size": 29
+					}
+				},
+				{
+					"name": "Soft Cable Knit Throw - Gray",
+					"gridImage": "/images/visualizer/throws/img2.jpg",
+					"prices": {
+						"one size": 49
+					}
+				},
+				{
+					"name": "Soft Cable Knit Throw - Ivory",
+					"gridImage": "/images/visualizer/throws/img3.jpg",
+					"prices": {
+						"one size": 49
+					}
+				},
+				{
+					"name": "Ruffled Shag Throw Blanket",
+					"gridImage": "/images/visualizer/throws/img4.jpg",
+					"prices": {
+						"one size": 39
+					}
+				},
+				{
+					"name": "Cozy Plus Throw Blanket - Gray",
+					"gridImage": "/images/visualizer/throws/img5.jpg",
+					"prices": {
+						"one size": 36
+					}
+				},
+				{
+					"name": "Cozy Plus Throw Blanket - Navy",
+					"gridImage": "/images/visualizer/throws/img6.jpg",
+					"prices": {
+						"one size": 36
+					}
+				},
+				{
+					"name": "Faux Mongolian Throw Blanket",
+					"gridImage": "/images/visualizer/throws/img7.jpg",
+					"prices": {
+						"one size": 89
+					}
+				},
+				{
+					"name": "Ajax Throw Blanket",
+					"gridImage": "/images/visualizer/throws/img8.jpg",
+					"prices": {
+						"one size": 55
+					}
+				},
+				{
+					"name": "Ombre Plush Throw Blanket",
+					"gridImage": "/images/visualizer/throws/img9.jpg",
+					"prices": {
+						"one size": 39
+					}
+				},
+				{
+					"name": "Plush Bed Blanket",
+					"gridImage": "/images/visualizer/throws/img10.jpg",
+					"prices": {
+						"one size": 36
+					}
+				}
+			]
+		},
+		{
+			"ind": 5,
+			"category": "Headboards",
+			"products": [
+				{
+					"name": "Twin / Twin XL Powered Headboard - Light Gray",
+					"gridImage": "/images/visualizer/headboards/img1.jpg",
+					"prices": {
+						"one size": 160
+					}
+				},
+				{
+					"name": "Twin / Twin XL Powered Headboard - Tan",
+					"gridImage": "/images/visualizer/headboards/img2.jpg",
+					"prices": {
+						"one size": 160
+					}
+				},
+				{
+					"name": "Twin / Twin XL Velvet Tufted Headboard Cushion",
+					"gridImage": "/images/visualizer/headboards/img3.jpg",
+					"prices": {
+						"one size": 70
+					}
+				},
+				{
+					"name": "Diamond Tufted Powered Headboard",
+					"gridImage": "/images/visualizer/headboards/img4.jpg",
+					"prices": {
+						"one size": 350
+					}
+				},
+				{
+					"name": "Pleated Powered Headboard",
+					"gridImage": "/images/visualizer/headboards/img5.jpg",
+					"prices": {
+						"one size": 350
+					}
+				},
+				{
+					"name": "Tufted Powered Headboard",
+					"gridImage": "/images/visualizer/headboards/img6.jpg",
+					"prices": {
+						"one size": 350
+					}
+				}
+			]
+		},
+		{
+			"ind": 6,
+			"category": "Decorative Pillows",
+			"products": [
+				{
+					"name": "Shut Eye Pillow",
+					"gridImage": "/images/visualizer/pillows/img1.jpg",
+					"prices": {
+						"one size": 36
+					}
+				},
+				{
+					"name": "Faux Mongolian Pillow - Square",
+					"gridImage": "/images/visualizer/pillows/img2.jpg",
+					"prices": {
+						"one size": 36
+					}
+				},
+				{
+					"name": "Square Gaga Double Nailhead Pillow",
+					"gridImage": "/images/visualizer/pillows/img3.jpg",
+					"prices": {
+						"one size": 39
+					}
+				},
+				{
+					"name": "Shaped Perfume Bottle Pillow",
+					"gridImage": "/images/visualizer/pillows/img4.jpg",
+					"prices": {
+						"one size": 36
+					}
+				},
+				{
+					"name": "Xoxo Pillow",
+					"gridImage": "/images/visualizer/pillows/img5.jpg",
+					"prices": {
+						"one size": 36
+					}
+				},
+				{
+					"name": "Faux Mongolian Pillow - Rectangle",
+					"gridImage": "/images/visualizer/pillows/img6.jpg",
+					"prices": {
+						"one size": 36
+					}
+				},
+				{
+					"name": "Crackle Metallic Pillow",
+					"gridImage": "/images/visualizer/pillows/img7a.jpg",
+					"prices": {
+						"one size": 36
+					}				},
+				{
+					"name": "Dream On Pillow",
+					"gridImage": "/images/visualizer/pillows/img8.jpg",
+					"prices": {
+						"one size": 29
+					}
+				}
+			]
+		}
+	]
+}

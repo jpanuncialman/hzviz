@@ -1,0 +1,135 @@
+@import 'general.scss';
+
+.visualizer-app {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 2em;
+  width: 100%;
+  max-width: 1350px;
+  margin-top: 2em;
+}
+
+.visualizer-app__section {
+	&__selector {
+		flex-basis: 40%;
+		padding: 0 2%;
+	}
+  
+  &__visualizer {
+  	flex-basis: 60%;
+    padding: 0 2%;
+  }  
+}
+
+/*** HEADER ***/
+.visualizer-app__section__visualizer__header {
+  margin-bottom: 2em;
+
+  
+}
+.visualizer-app__section__visualizer__header-header {
+  margin: 0 0 .5em;
+}
+
+/*** CART BUTTON ***/
+.visualizer-app__add-to-cart {
+  margin-top: 2em;
+
+  &__hidden {
+    display: none;
+  }
+}
+.visualizer-app__add-to-cart-button {
+  border: 2px solid $pink;
+  color: $pink;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 1em 0;
+  @include transition(all 0.25s ease-in-out);
+
+  &:hover {
+    color: $white;
+    background-color: $pink;
+  }
+}
+
+@media screen and (max-width: 812px) {
+  .visualizer-app {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  .visualizer-app__section__visualizer__mobile {
+    z-index: 999;
+    background: $white;
+    display: flex;
+    // flex-direction: column;
+    transform-origin: 0 0;
+    // transform: translate(calc(50% + 1.5em), -1.5em) rotate(90deg);
+    margin: 0;
+    // padding: 1rem 2rem;
+    flex-flow: row wrap;
+    transition: transform 1s ease-in-out;
+    // @include transition(top 1s ease-in-out);
+    
+
+    .visualizer-app__section__visualizer__header {
+      // display: inline-block;
+      display: flex;
+      
+      flex-direction: column;
+      padding: 0;
+      flex-basis: 100%;
+      // padding: 0 2%;
+      // @include transition (flex-basis 0.5s ease-in-out);
+     
+
+    }
+    .visualizer {
+      // display: inline-block;
+      // width: 100%;
+      flex-basis: 100%;
+      transform-origin: center;
+      transform: scale(1);
+      @include transition (transform 0.5s ease-in-out);
+      // @include transition(flex-basis 0.5s ease-in-out);
+
+      // @include transition (width 0.5s ease-in-out);
+    }
+
+    &.sticky {
+      position: fixed;
+      flex-direction: row;
+      // padding: 0 2%;
+      top: 0;
+      // transform-origin: 50% 1.5em;
+    //   transform: translate(calc(50% + 1.5em), -1.5em) rotate(-90deg);
+    // transition: transform 1s ease-in-out;
+
+      .visualizer-app__section__visualizer__header {
+        // width: 85%;
+        flex-basis: 60%;
+
+      }
+
+      .visualizer {
+        // width: 10%;
+        width: 125%;
+        flex-basis: 40%;
+        transform: scale(0.93);
+
+        img {
+          max-height: 100%;
+          max-width: auto;
+        }
+      }
+    }
+  }
+
+  .visualizer-app__section__visualizer__filler {
+    &.sticky {
+      padding-top: 100%;
+    }
+  }
+}

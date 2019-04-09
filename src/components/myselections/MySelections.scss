@@ -1,0 +1,27 @@
+@import '../../general.scss';
+
+.my-selections__header {
+	border-bottom: 1.5px solid $light-gray;
+}
+
+.my-selections__list-item {
+	padding: 1em 0;
+	border-bottom: 1.5px solid $light-gray;
+	height: auto;
+	max-height: 50px;
+	overflow: hidden;
+	@include transition(all 0.25s ease-in-out);
+	@include flex();
+	justify-content: space-between;
+	align-items: center;
+
+	&__hidden {
+		border-color: transparent;
+		padding: 0;
+		max-height: 0;
+	}
+}
+
+.my-selections__list-item-price {
+	font-weight: bold;
+}
