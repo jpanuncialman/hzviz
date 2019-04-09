@@ -1,68 +1,48 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+##Visualizer App VERSION 0.1 (pre middleware and images)
+- Does not include API calls and all visualizer images. Will need to be modified when these are ready.
+	- Only shows one image per category
+- Add to cart button is not functional
+- Product list needs to be finalized 
 
-In the project directory, you can run:
+### Components
+- Dynamic bed image
+- Product selector
+	- Checklist
+		- Checklist Item
+			- Type
+			- Price
+			- Fabric selector (??)
+			- Size selector
+			- Color selector
+- Share popup
+- Add to Cart popup (products + batch)
 
-### `npm start`
+### References
+- (https://github.com/hzdg/dormify.com/files/2862190/img-211132848-0001.pdf) / (file:///C:/Users/Joe/Downloads/img-211132848-0001%20(1).pdf)
+- (https://github.com/hzdg/dormify.com/files/2862191/img-211141735-0001.pdf) / (file:///C:/Users/Joe/Downloads/img-211132848-0001%20(1).pdf)
+- Example: (https://docs.google.com/document/d/1Q15X6AvSTSUTYIFBmA2mEPD5HxsLS9O4Jf_x3r8Zm2M/edit?usp=sharing)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### MVP Requirements
 
-### `npm test`
+#### Summary
+- The minimum shippable product for the Dormify room visualizer will allow users to decorate a bed with Dormify products. 
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### High-level Anticipated User Journey / Assumptions 
+- When first brought to the visualizer, users will see an undecorated bed that is shot in white.
+- Visualizer will be limited to Dormify’s bedding products and include the following categories
+- Additional features and functionality will be scoped following the launch of the MVP
+- The bed view will match the views in the current Dormify Collections (as of 2.5.19 found here: https://www.dormify.com/collections)
+- Users will not be able to rotate the view of the bed
+- Will include mobile and desktop versions
+- Allow users to add products from their design to the cart as a batch
+- Dormify will be responsible for product photography and editing
+- Dormify will be responsible for maintenance of the visualizer, including uploading product photography, managing
+- Dormify, with the guidance of HZ as requested, will source the development of the visualizer from a third party.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#### Deliverables
+HZ will provide an annotated UX document including one user flow document  and wireframes for up to eight (8) views
+HZ will provide up to five visual designs for various screen views
+HZ will provide Dormify requirements and/or guidelines for product photography

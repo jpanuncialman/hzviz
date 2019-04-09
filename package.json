@@ -3,8 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "apollo-boost": "^0.1.28",
+    "apollo-cache-inmemory": "^1.4.3",
+    "apollo-client": "^2.4.13",
+    "apollo-link-context": "^1.0.14",
+    "apollo-link-http": "^1.5.11",
+    "graphql": "^14.1.1",
+    "node-sass": "^4.11.0",
     "react": "^16.8.2",
+    "react-apollo": "^2.4.1",
     "react-dom": "^16.8.2",
+    "react-responsive": "^6.1.1",
+    "react-responsive-modal": "^3.6.0",
     "react-scripts": "2.1.5"
   },
   "scripts": {
