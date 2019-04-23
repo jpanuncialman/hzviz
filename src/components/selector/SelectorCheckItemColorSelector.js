@@ -10,52 +10,59 @@ class SelectorCheckItemColorSelector extends Component {
 		this.state = {
 			selectedSize: '',
 			sizes: [],
-			colors: []
+			colors: [],
+			selectedColor: ''
 		}
 
 	}
 
-	componentDidMount() {
-		this.renderSizes();
-	}
+	// componentDidMount() {
+	// 	this.renderSizes();
+	// }
 
-	renderSizes = () => {
+	renderColors = () => {
 		let allSizes = [];
 		let products = this.props.products;
 		let colorsArr = [];
-		products.forEach((product) => {
-			if(product.colors && product.colors.length > 1) colorsArr = product.colors;
-		});
+		// products.map((product) => {
+		// 	return (
+
+		// 	);
+		// });
 
 
-		let colors = colorsArr.map((color, ind) => {
+		return this.props.options.map((color, ind) => {
 			return(
 				<SelectorCheckItemColor
 					categorySelected={ this.props.categorySelected }
 					key={ this.props.category.toLowerCase().replace(" ", "-") + "-color-" + ind } 
-					color={ color.hex }
+					color={ color }
 					currentSize={ this.state.selectedSize }
+					currentColor={ this.state.selectedColor }
 					syncColor={ this.syncColor }
 					category={ this.props.category }
 					syncProductInfoForParent={ this.props.syncProductInfoForParent }
-					syncSizeInfoForCategory={ this.props.syncSizeInfoForCategory }
+					syncOptionForCategory={ this.props.syncOptionForCategory }
 				/>
 			);
 		})
 
-		this.setState({ colors: colors });
+		// this.setState({ colors: colors });
 	}
 
 	syncColor = (size) => {
-		this.setState({ selectedSize: size });
+		this.setState({ selectedColor: size });
 	}
 
 
 	render() {
 		return (
 			<div className="selector-checklist-color-selector">
+				<div className="selector-checklist-color-selector__header">
+					Filter Color
+				</div>
 				<div className="selector-checklist-color-selector__colors">
-					{ this.state.colors !== "one size" ? this.state.colors : null }
+					{ this.renderColors() }
 				</div>
 			</div>
 		);

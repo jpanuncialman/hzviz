@@ -1,0 +1,32 @@
+{
+	"comforterduvet": {
+		"ind": 1,
+		"displayText": "Choose your bedding",
+		"subText": "Comforters come filled, while duvet covers need a duvet insert to fill them (sold separately!)."
+	},
+	"sheets": {
+		"ind": 2,
+		"displayText": "Select your sheet set",
+		"subText": "Each set incl. a top sheet, fitted sheet, and 1 or 2 pillowcase(s). Twin/XL = 1 and Full/Queen = 2."
+	},
+	"decorativepillows": {
+		"ind": 3,
+		"displayText": "Pick 3 decorative pillows",
+		"subText": "Pro tip: Play with the positioning of the pillows by changing the order in which you select them."
+	},
+	"accentpillows": {
+		"ind": 4,
+		"displayText": "Pick your accent pillow",
+		"subText": "Pro tip: Play with the positioning of the pillows by changing the order in which you select them."
+	},
+	"throws": {
+		"ind": 5,
+		"displayText": "Choose a throw blanket",
+		"subText": "Pick your finishing touch! Perfect for mid-day snuggle sessions."
+	},
+	"headboard": {
+		"ind": 6,
+		"displayText": "Take it up a notch with a headboard",
+		"subText": "Add a headboard for that “omg this doesn’t even look like a dorm” wow factor."
+	}
+}

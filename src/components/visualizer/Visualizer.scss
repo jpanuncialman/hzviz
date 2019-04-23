@@ -7,6 +7,7 @@
 
 .visualizer__images {
 	position: relative;
+	// min-height: 400px;
 	display: grid;
   grid-template-columns: 1fr;
 
@@ -16,13 +17,39 @@
 		top: 0;
 		grid-row-start: 1;
  		grid-column-start: 1;
+ 		left: 0;
+ 		right: 0;
 
  		&.empty {
  			z-index: 1;
  		}
 
- 		&.pillows {
+ 		&.decorativePillows {
  			z-index: 2;
+ 			width: 48%;
+ 			height: auto;
+ 			top: 11%;
+ 			position: absolute;
+ 			// left: 0;
+ 			// transform: translateX(-50%);
+
+ 			&__left {
+ 				left: 2%;
+ 				// top: 0;
+ 				transform: none;
+ 			}
+
+ 			&__right {
+ 				right: 0px;
+ 				// top: 0;
+ 				transform: translateX(100%);
+ 			}
+
+ 			&__center {
+ 				left: 50%;
+ 				top: 12%;
+				transform: translateX(-50%);
+ 			}
  		}
 
  		&.sheetSet {
@@ -33,11 +60,11 @@
  			z-index: 4;
  		}
 
- 		&.decorativePillows {
+ 		&.accentPillows, &.accentPillow {
  			z-index: 5;
  		}
 
- 		&.blanketsThrows {
+ 		&.throws {
  			z-index: 6;
  		}
 	}

@@ -4,28 +4,42 @@ import SelectorCheckItemBoxSelector from './SelectorCheckItemBoxSelector';
 import SelectorCheckItemGridSelector from './SelectorCheckItemGridSelector';
 import SelectorCheckItemColorSelector from './SelectorCheckItemColorSelector';
 import SelectorCheckItemColorModal from './SelectorCheckItemColorModal';
+import { capitalize } from '../../utils/util';
 
 import './SelectorCheckItem.scss';
 
 class SelectorCheckItem extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 
 		this.state = {
 			price: 0,
 			selected: false,
-			selectedSize: '',
+			selectedOption: '',
+			selectedColor: '',
 			showModal: false,
 			selectedProduct: {},
-			selectedItems: []		
+			selectedItems: [],
+			options: [],
+			comforterSelected: props.comforterSelected		
 		}
 	}
 
 	componentDidMount() {
-		console.log(this.props.title + " " + this.props.title.includes("Pillows"));
 		// products.map((product) => {
 		// 	return Object.keys(product.colors);
 		// })
+		this.renderOptions();
+	}
+
+	componentDidUpdate(prevProps) {
+		if (prevProps.options !== this.props.options) this.setState({ options: this.props.options });
+		if (prevProps.comforterSelected !== this.props.comforterSelected) this.setState({ comforterSelected: this.props.comforterSelected });
+	}
+
+	handleClick = () => {
+		if (this.props.title.includes("comforter") || (this.state.comforterSelected)) this.handleSelect();
+		else this.props.showComforterTooltip();
 	}
 
 	handleSelect = () => {
@@ -33,8 +47,23 @@ class SelectorCheckItem extends Component {
 		this.setState({ selected: !this.state.selected });
 	}
 
-	syncSizeInfoForCategory = (size) => {
-		this.setState({ selectedSize: size });
+	renderOptions = () => {
+		let options = [];
+		this.props.products.forEach(product => {
+			let option = product.selectedOptions[0].value;
+			if (!options.includes(option)) options.push(option);
+		});
+		options.sort((a,b) => {
+			if (a.includes("Twin")) return -3;
+			else if (a.includes("Full")) return -2;
+			else if (a.includes("Queen")) return 1;
+			else return 2;
+		});
+		this.setState({ options: options });
+	}
+
+	syncOptionForCategory = (option) => {
+		this.setState({ selectedOption: option });
 	}
 
 	syncProductForCategory = (item) => {
@@ -57,52 +86,64 @@ class SelectorCheckItem extends Component {
 	}
 
 	handleShowModal = () => {
-		console.log("Show modal");
 		this.setState({ showModal: !this.state.showModal });
 	}
 	
 	render() {
 		return (
 			<div className="selector-checklist-item">
-				<div className="selector-checklist-item__header" onClick={ this.handleSelect } >
+				<div className="selector-checklist-item__header" onClick={ this.handleClick } >
 					<div className="selector-checklist-item__check-title">
 						<input className={ !isMobile(navigator.userAgent) ? "selector-checklist-item__checkbox hover-styles" : "selector-checklist-item__checkbox" } type="checkbox" checked={ this.state.selected } />
 						<span className="selector-checklist-item__check" ></span>
-						<h4 className="selector-checklist-item__title" >{ this.props.title }</h4>
+						<h4 className={ this.state.selected ? "selector-checklist-item__title" : "selector-checklist-item__title selector-checklist-item__title__not-selected" } >{ this.props.displayText }</h4>
 					</div>
 					<div className={  this.state.selected ? "selector-checklist-item__expand-button expanded" : "selector-checklist-item__expand-button" } />
 					<div className={ this.state.selected ? "selector-checklist-item__plus-minus expanded"  : "selector-checklist-item__plus-minus" } >
 					</div>
 				</div>
 				<div className={ this.state.selected ? "selector-checklist-item__body expanded" : "selector-checklist-item__body" }>
+					<div className="selector-checklist-item__subtext">
+						{ this.props.subText && this.props.subText.length > 0 ? <p>{this.props.subText}</p> : null }
+					</div>
+				{
+					this.props.sortFactor !== "color" ?
 					<div className="checklist-item__sizes-container">
 						<SelectorCheckItemBoxSelector
+							categoryObj={ this.props.categoryObj }
 							categorySelected={ this.state.selected }
 							category={ this.props.title }
 							products={ this.props.products }
+							options={ this.state.options }
 							syncProductInfoForParent={ this.props.syncProductInfoForParent }
-							syncSizeInfoForCategory={ this.syncSizeInfoForCategory }
+							syncOptionForCategory={ this.syncOptionForCategory }
 						/>
 					</div>
-					{
-						// products.map((product) => {
-						// 	return Object.keys(product.colors);
-						// })
-						<div className="checklist-item__color-container">
-
+					:
+					<div className="checklist-item__color-container">
 							<SelectorCheckItemColorSelector
+								categoryObj={ this.props.categoryObj }
 								categorySelected={ this.state.selected }
 								category={ this.props.title }
 								products={ this.props.products }
+								options={ this.state.options }
 								syncProductInfoForParent={ this.props.syncProductInfoForParent }
-								syncSizeInfoForCategory={ this.syncSizeInfoForCategory }
+								syncOptionForCategory={ this.syncOptionForCategory }
 							/>
 						</div>
-					}
-					<div className={ (this.state.selected && this.props.title.includes("Pillows")) || (this.state.selected && this.state.selectedSize !== '') ? "checklist-item__grid-selector-container" : "checklist-item__grid-selector-container checklist-item__grid-selector-container__hidden" }>
+				}
+										{
+						// products.map((product) => {
+						// 	return Object.keys(product.colors);
+						// })
+						
+					// */
+				}
+					<div className={/* (this.state.selected && this.props.title.includes("Pillows")) || (this.state.selected && this.state.selectedSize !== '') */ this.state.selected ? "checklist-item__grid-selector-container" : "checklist-item__grid-selector-container checklist-item__grid-selector-container__hidden" }>
 						<SelectorCheckItemGridSelector
+							categoryObj={ this.props.categoryObj }
 							categorySelected={ this.state.selected }
-							sizeSelected={ this.state.selectedSize }
+							sizeSelected={ this.state.selectedOption }
 							productSelected={ this.state.selectedProduct }
 							category={ this.props.title }
 							products={ this.props.products }

@@ -1,5 +1,13 @@
 @import '../../general.scss';
 
+.selector-checklist-color-selector {
+  // padding: 0 2%;
+}
+
+.selector-checklist-color-selector__header {
+  margin-bottom: 0.5em;
+}
+
 .selector-checklist-color {
   width: 20px;
   height: 20px;
@@ -8,6 +16,7 @@
   margin-right: 1em;
   border: 1.5px solid transparent;
   transition: border-color 0.25s ease-in-out;
+  border-color: $light-gray;
 
   &:hover, &__selected {
   	border-color: $black;

@@ -1,18 +1,29 @@
 @import '../../general.scss';
 
+.selector-checklist-size-selector {
+	padding: 0 2%;
+}
+
 .selector-checklist-size-selector__sizes {
 	display: flex;
 	flex-flow: row wrap;
 }
 
-.selector-checklist-item-box {
-	flex-basis: 20%;
+.selector-checklist-item-box__container {
 	margin-right: 1em;
+	flex-basis: 30%;
+	text-align: center;
+}
+
+.selector-checklist-item-box {
+	width: 100%;
 	align-items: center;
 	margin-bottom: 1em;
 	text-align: center;
-	font-size: 12px;
+	font-size: 16px;
+	line-height: 20px;
 	cursor: pointer;
+	border-radius: 4px;
 	@include transition(all 0.25s ease-in-out);
 
 	&__selected, &:hover {

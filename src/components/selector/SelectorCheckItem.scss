@@ -13,6 +13,11 @@
 	position: relative;
 }
 
+.selector-checklist-item__subtext {
+	padding: 0 2%;
+	margin-bottom: 2em;
+}
+
 //Checkbox
 .selector-checklist-item__checkbox {
 	position: absolute;
@@ -80,6 +85,13 @@
 .selector-checklist-item__title {
 	margin: 0;
 	margin-left: 1em;
+	font-size: 18px;
+
+	&__not-selected {
+		@include transition(all 0.25s ease-in-out);
+		color: $light-gray;
+		font-weight: 400;
+	}
 }
 
 
@@ -122,10 +134,12 @@
 	max-height: 0;
 	padding: 0;
 	overflow: hidden;
+	// overflow-x: visible;
 	@include transition(all 0.25s ease-in-out);
 
 	&.expanded {
 		padding: 1em 0;
-		max-height: 500px;
+		max-height: 1200px;
+		overflow: visible;
 	}
 }

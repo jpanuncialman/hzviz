@@ -1,25 +1,31 @@
 @import '../../general.scss';
 .checklist-item__grid-selector-container {
-	max-height: 1000px;
-	overflow: hidden;
+	max-height: 2500px;
+	// overflow-y: hidden;
+	// overflow-x: visible;
 	height: auto;
+	padding: 2em 0;
 	@include transition(max-height 0.55s ease-in-out);
+	position: relative;
 
 	&__hidden {
 		max-height: 0;
+		padding: 0;
 	}
+
 }
 .selector-checklist-grid-selector__items {
 	display: grid;
 	grid-template-columns: 23% 23% 23% 23%;
 	grid-column-gap: 2%;
-	grid-row-gap: 2%;
-
+	// grid-row-gap: 2%;
 
 }
 
 .selector-checklist-item-grid-item, .selector-checklist-item-grid-item__selected {
 	position: relative;
+	// overflow: hidden;
+	
 
 	.selector-checklist-item-grid-item__image {
 		width: 100%;
@@ -28,7 +34,36 @@
 		border: 2px solid transparent;
 		border-radius: 5px;
 		@include transition(border-color 0.25s ease-in-out); 
+		
 	}
+
+	.selector-checklist-item-grid-item__tooltip {
+			background: $black;
+			font-size: 12px;
+			color: #fff;
+			min-width: 110%;
+			position: absolute;
+			text-align: center;
+			padding: 0.75em 2%;
+			opacity: 0;
+			pointer-events: none;
+			left: 50%;
+			transform: translateX(-50%);
+			top: -50%;
+			@include transition(opacity 0.25s ease-in-out); 
+			z-index: 9;
+
+			&::after {
+				content: "";
+			  position: absolute;
+			  top: 100%;
+			  left: 50%;
+			  transform: translateX(-50%);
+			  border-width: 10px;
+			  border-style: solid;
+			  border-color: $black transparent transparent transparent;
+			}
+		}
 
 	.selector-checklist-item-grid-item__check-circle, .selector-checklist-item-grid-item__check-circle__selected {
 		position: absolute;
@@ -48,11 +83,14 @@
 			width: 10px;
 	    height: 20px;
 	    content: "";
-	    top: 0.85em;
-	    left: 1.5em;
+	    // top: 0.85em;
+	    // left: 1.5em;
+	    top: 50%;
+	    left: 50%;
 	    border-bottom: 4px solid $white;
 	    border-right: 4px solid $white;
-	    @include rotate(45deg);
+	    // @include rotate(45deg);
+	    transform: rotate(45deg) translate(-105%, -35%);
 	    opacity: 0;
 	    @include transition(opacity 0.25s ease-in-out);		
 		}
@@ -70,6 +108,12 @@
 	&__selected, &:hover {
 		.selector-checklist-item-grid-item__image {
 			border-color: $pink;
+		}
+	}
+
+	&:hover {
+		.selector-checklist-item-grid-item__tooltip {
+			opacity: 1;
 		}
 	}
 

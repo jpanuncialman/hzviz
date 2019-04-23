@@ -1,5 +1,54 @@
 @import '../../general.scss';
+.selector-checklist {
+	position: relative;
+}
 
 .selector-checklist-item__header {
 	padding: 1em 0;
+}
+
+.selector-checklist__tooltip-overlay {
+	position: fixed;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+
+	&__hidden {
+		display: none;
+		pointer-events: none;
+	}
+}
+
+.selector-checklist__tooltip {
+  position: absolute;
+  color: $white;
+  background: $black;
+  padding: 2em;
+  z-index: 3;
+  opacity: 1;
+  top: 3em;
+  left: 1em;
+  @include transition(opacity 0.5s ease-in-out);
+
+  &::after {
+		content: "";
+	  position: absolute;
+	  top: -40px;
+	  left: 30%;
+	  border-width: 20px;
+	  border-style: solid;
+	  border-color: $black transparent transparent transparent;
+	  transform: rotate(180deg);
+	}
+
+  &__hidden {
+  	opacity: 0;
+  	pointer-events: none;
+  }
 }
