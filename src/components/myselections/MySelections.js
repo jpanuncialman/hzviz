@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './MySelections.scss';
-import * as util from '../../utils/util';
 
 class MySelections extends Component {
 	constructor(props) {
@@ -33,8 +32,6 @@ class MySelections extends Component {
 
 	renderState = () => {
 		let mySelections = this.state.mySelections;
-		let categories = [];
-
 	  for (let key in this.props) {
 	  	if (this.props[key].products) {
 	  		this.props[key].products.forEach(product => {
@@ -54,9 +51,6 @@ class MySelections extends Component {
 
 	renderMySelections = () => {
 		return this.state.mySelections.map(selection => {
-			// console.log("MySelections: " + selection)
-			let selectionShow = selection + "Show";
-			let sizeInd = '';
 			let price = selection.price ? parseInt(selection.price).toFixed(2) : 0;
 			return(
 				<div className={ "my-selections__list-item" /*: "my-selections__list-item my-selections__list-item__hidden"*/ }>

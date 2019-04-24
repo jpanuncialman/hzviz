@@ -22,14 +22,7 @@ class Visualizer extends Component {
 	}
 
 	showEmptyImage = () => {
-		 
-		// Object.keys(this.state)
-		// .filter(state => {
-		// 	return state.includes("Show");
-		// })
-		// .every(state => !this.state[state]) ?
-		return <img alt="No visualizer items selected" src="/images/visualizer/visualizer/empty.png" />;
-		// null
+		return <img alt="No visualizer items selected" src="https://cdn.shopify.com/s/files/1/1765/3959/files/empty.png?148155" />;
 	}
 
 	renderImage = () => {

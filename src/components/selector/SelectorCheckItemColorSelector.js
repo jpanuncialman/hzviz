@@ -16,21 +16,7 @@ class SelectorCheckItemColorSelector extends Component {
 
 	}
 
-	// componentDidMount() {
-	// 	this.renderSizes();
-	// }
-
 	renderColors = () => {
-		let allSizes = [];
-		let products = this.props.products;
-		let colorsArr = [];
-		// products.map((product) => {
-		// 	return (
-
-		// 	);
-		// });
-
-
 		return this.props.options.map((color, ind) => {
 			return(
 				<SelectorCheckItemColor
@@ -46,8 +32,6 @@ class SelectorCheckItemColorSelector extends Component {
 				/>
 			);
 		})
-
-		// this.setState({ colors: colors });
 	}
 
 	syncColor = (size) => {

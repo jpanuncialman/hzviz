@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import SelectorCheckItem from './SelectorCheckItem';
-import data from '../../data/data.json';
 import dataForChecklist from '../../data/dataForChecklist.json';
 import * as util from '../../utils/util';
 
@@ -70,19 +69,23 @@ class SelectorChecklist extends Component {
 
 		})
 		.map(category => {
-			return (
-				<SelectorCheckItem
-					categoryObj={ this.props[util.camelize(category.category)] }
-					title={ category.category }
-					displayText={ dataForChecklist[category.category.replace("/", "").replace(" ", "")] ? dataForChecklist[category.category.replace("/", "").replace(" ", "")].displayText : category.category && category.category.length > 0 ? category.category : ""}
-					subText={ dataForChecklist[category.category.replace("/", "").replace(" ", "")] ? dataForChecklist[category.category.replace("/", "").replace(" ", "")].subText : "" }
-					products={ category.products }
-					sortFactor={ category.sortFactor }
-					syncProductInfoForParent={ this.props.syncProductInfoForParent }
-					comforterSelected={ this.props.comforterSelected }
-					showComforterTooltip={ this.showComforterTooltip }
-				/>
-			);
+			if (category.category.replace("/", "").replace(" ", "") in dataForChecklist) {			
+				return (
+					<SelectorCheckItem
+						categoryObj={ this.props[util.camelize(category.category)] }
+						title={ category.category }
+						displayText={ dataForChecklist[category.category.replace("/", "").replace(" ", "")] ? dataForChecklist[category.category.replace("/", "").replace(" ", "")].displayText : category.category && category.category.length > 0 ? category.category : ""}
+						subText={ dataForChecklist[category.category.replace("/", "").replace(" ", "")] ? dataForChecklist[category.category.replace("/", "").replace(" ", "")].subText : "" }
+						products={ category.products }
+						sortFactor={ category.sortFactor }
+						syncProductInfoForParent={ this.props.syncProductInfoForParent }
+						comforterSelected={ this.props.comforterSelected }
+						showComforterTooltip={ this.showComforterTooltip }
+					/>
+				);
+			} else {
+				return null;
+			}
 		});
 
 		return checklistRender;

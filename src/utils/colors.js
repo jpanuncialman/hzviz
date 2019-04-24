@@ -89,7 +89,6 @@ export const getColorHex = color => {
     olive: '#60726C',
     'dusty blue': '#98B0DF',
     'black silver': '#000000',
-    'black silver': '#000000',
     'palm print': '#691FF6',
     'heather grey': '#B5B1B2',
     'metallic grey': '#66625F',

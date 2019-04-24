@@ -2,7 +2,7 @@
 
 .visualizer-app {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 0 auto 2em;
   width: 100%;
   max-width: 1350px;
@@ -11,12 +11,12 @@
 
 .visualizer-app__section {
 	&__selector {
-		flex-basis: 40%;
+		flex-basis: 48%;
 		padding: 0 2%;
 	}
   
   &__visualizer {
-  	flex-basis: 60%;
+  	flex-basis: 50%;
     padding: 0 2%;
   }  
 }
@@ -42,6 +42,7 @@
 .visualizer-app__add-to-cart-button {
   border: 2px solid $pink;
   color: $black;
+  background-color: $white;
   font-size: 15px;
   width: 100%;
   text-transform: uppercase;

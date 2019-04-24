@@ -3,8 +3,6 @@ import { isMobile } from '../../utils/util';
 import SelectorCheckItemBoxSelector from './SelectorCheckItemBoxSelector';
 import SelectorCheckItemGridSelector from './SelectorCheckItemGridSelector';
 import SelectorCheckItemColorSelector from './SelectorCheckItemColorSelector';
-import SelectorCheckItemColorModal from './SelectorCheckItemColorModal';
-import { capitalize } from '../../utils/util';
 
 import './SelectorCheckItem.scss';
 
@@ -26,9 +24,6 @@ class SelectorCheckItem extends Component {
 	}
 
 	componentDidMount() {
-		// products.map((product) => {
-		// 	return Object.keys(product.colors);
-		// })
 		this.renderOptions();
 	}
 
@@ -38,8 +33,8 @@ class SelectorCheckItem extends Component {
 	}
 
 	handleClick = () => {
-		if (this.props.title.includes("comforter") || (this.state.comforterSelected)) this.handleSelect();
-		else this.props.showComforterTooltip();
+		/*if (this.props.title.includes("comforter") || (this.state.comforterSelected))*/ this.handleSelect();
+		// else this.props.showComforterTooltip();
 	}
 
 	handleSelect = () => {
@@ -154,22 +149,6 @@ class SelectorCheckItem extends Component {
 							allowMult={ this.props.allowMult }
 							maxSelectable={ this.props.maxSelectable }
 						/>
-				
-						{/*<SelectorCheckItemColorModal
-							// colors={ this.props.products.colors && this.props.products.colors.length > 0 ? this.props.products.colors : []  }
-							categorySelected={ this.state.selected }
-							sizeSelected={ this.state.selectedSize }
-							productSelected={ this.state.selectedProduct }
-							category={ this.props.title }
-							products={ this.props.products }
-							syncProductForCategory={ this.syncProductForCategory }
-							syncProductInfoForParent={ this.props.syncProductInfoForParent }
-							showModal={ this.state.showModal }
-							handleShowModal={ this.handleShowModal }
-							selectedProduct={ this.state.selectedProduct }
-						/>*/}
-							
-						
 					</div>
 				</div>
 			</div>
